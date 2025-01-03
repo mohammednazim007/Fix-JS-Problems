@@ -38,3 +38,20 @@ const combinedArray2 = employees.reduce((acc, employee) => {
   );
   return acc;
 }, []);
+
+//T-023: Find the highest salary among employees.
+// 8000
+const highestSalary = employees.reduce((acc, employee) => {
+  return employee.salary < acc ? acc : employee.salary;
+}, 0);
+
+// second way
+const highestSalary2 = employees.reduce((acc, employee) => {
+  return Math.max(acc, employee.salary);
+}, 0);
+
+// third way
+const highestSalary3 = Math.max(
+  ...employees.map((employee) => employee.salary)
+);
+
