@@ -113,12 +113,25 @@ const lessSalary = employees.filter((less) => less.salary < 5000);
 
 // T-029: Find the first employee who earns exactly 5100.
 // { id: 10, name: 'Jane', departmentId: 1, salary: 5100 }
-const firstEmployee = employees.find((salary) => salary.salary === 5100);
+const firstEarnEmployee = employees.find((salary) => salary.salary === 5100);
 
 // T-030: Find the last employee in the "HR" department.
-const findEmployee = departments.find(
+const findLastEmployeeId = departments.find(
   (emp) => emp.name.toLowerCase() === "hr"
 ).id;
-const lastHREmployee = employees.filter((last) => last.id === findEmployee);
+const lastHREmployee = employees.filter(
+  (last) => last.id === findLastEmployeeId
+);
 const lastEmployee = departments[lastHREmployee.length - 1];
-console.log(lastEmployee);
+
+// T-031: Find the first employee in the "Marketing" department.
+// [ { id: 3, name: 'Charlie', departmentId: 3, salary: 4500 } ]
+
+const firstMarketingEmployeeId = departments.find(
+  (mrk) => mrk.name.toLowerCase() === "marketing"
+).id;
+const firstMarketingEmployee = employees.filter(
+  (employee) => employee.id === firstMarketingEmployeeId
+);
+
+
