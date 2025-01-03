@@ -77,3 +77,11 @@ const secondSales = departments.find(
 const biggestSalary=employees.filter(salary=>salary.salary >=6000)
 
 // T-026: Create an array of employee names only.
+// [
+//   'Alice',   'Bob',
+//   'Charlie', 'Diana',
+//   'Edward',  'Fiona',
+//   'George',  'Helen',
+// ]
+const employeeNameArray=employees.map(employees=>`${employees?.name}`)
+
