@@ -112,5 +112,13 @@ const secondTotalSalary = employees.reduce(
 const lessSalary = employees.filter((less) => less.salary < 5000);
 
 // T-029: Find the first employee who earns exactly 5100.
+// { id: 10, name: 'Jane', departmentId: 1, salary: 5100 }
 const firstEmployee = employees.find((salary) => salary.salary === 5100);
-console.log(firstEmployee);
+
+// T-030: Find the last employee in the "HR" department.
+const findEmployee = departments.find(
+  (emp) => emp.name.toLowerCase() === "hr"
+).id;
+const lastHREmployee = employees.filter((last) => last.id === findEmployee);
+const lastEmployee = departments[lastHREmployee.length - 1];
+console.log(lastEmployee);
