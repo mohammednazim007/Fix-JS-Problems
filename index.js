@@ -134,4 +134,10 @@ const firstMarketingEmployee = employees.filter(
   (employee) => employee.id === firstMarketingEmployeeId
 );
 
+// T-034: Verify if all employees belong to a department listed in the departments array.
+const validUsers = departments.map((department) => department.id);
+const validUser = employees.filter((employeeUser) =>
+  validUsers.includes(employeeUser.departmentId)
+);
 
+console.log(validUser);
