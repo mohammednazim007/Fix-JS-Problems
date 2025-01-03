@@ -55,3 +55,25 @@ const highestSalary3 = Math.max(
   ...employees.map((employee) => employee.salary)
 );
 
+//T-024: Check if there is at least one employee in the "Sales" department.
+// filter method will return all match value (if multiple value exist)
+// [ { id: 4, name: 'Sales' } ]
+const oneSalesEmployee = departments.filter(
+  (employees) => employees.name.toLocaleLowerCase() === "sales"
+);
+
+// in JS (find) method is used to search for the first element
+const secondSales = departments.find(
+  (salesman) => salesman?.name?.toLocaleLowerCase() === "sales"
+);
+
+// T-025: Write a function to filter employees earning more than 6000.
+// [
+//   { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+//   { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+//   { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+//   { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+// ];
+const biggestSalary=employees.filter(salary=>salary.salary >=6000)
+
+// T-026: Create an array of employee names only.
