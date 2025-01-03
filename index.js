@@ -33,7 +33,8 @@ const combinedArray = employees.map((employee) => {
 
 // second way
 const combinedArray2 = employees.reduce((acc, employee) => {
-  acc.push(`${employee.name} - (${departments[employee.departmentId - 1].name})`);
+  acc.push(
+    `${employee.name} - (${departments[employee.departmentId - 1].name})`
+  );
   return acc;
 }, []);
-
