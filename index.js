@@ -20,7 +20,20 @@ const departments = [
 ];
 
 // 21: Can you filter employees who work in the "Engineering" department?
+// [ { id: 2, name: 'Engineering' } ]
 const engineeringEmployees = departments.filter(
   (employee) => employee.name === "Engineering"
 );
-// [ { id: 2, name: 'Engineering' } ]
+
+//T-022: Create a new array that combines employee names and department names in the format: "Alice (HR)".
+//  ['Alice - (HR)','Bob - (Engineering)']
+const combinedArray = employees.map((employee) => {
+  return `${employee.name} - (${departments[employee.departmentId - 1].name})`;
+});
+
+// second way
+const combinedArray2 = employees.reduce((acc, employee) => {
+  acc.push(`${employee.name} - (${departments[employee.departmentId - 1].name})`);
+  return acc;
+}, []);
+
