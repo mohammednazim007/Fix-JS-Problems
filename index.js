@@ -74,7 +74,7 @@ const secondSales = departments.find(
 //   { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
 //   { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
 // ];
-const biggestSalary=employees.filter(salary=>salary.salary >=6000)
+const biggestSalary = employees.filter((salary) => salary.salary >= 6000);
 
 // T-026: Create an array of employee names only.
 // [
@@ -83,5 +83,34 @@ const biggestSalary=employees.filter(salary=>salary.salary >=6000)
 //   'Edward',  'Fiona',
 //   'George',  'Helen',
 // ]
-const employeeNameArray=employees.map(employees=>`${employees?.name}`)
+const employeeNameArray = employees.map((employees) => `${employees?.name}`);
 
+// T-027: Calculate the total salary of all employees using
+// 58300
+const employeeTotalSalary = employees?.reduce((accumulator, current) => {
+  accumulator += current.salary;
+  return accumulator;
+}, 0);
+
+// second way
+// { totalSalary: 58300 }
+const secondTotalSalary = employees.reduce(
+  (acc, current) => {
+    acc.totalSalary += current.salary;
+    return acc;
+  },
+  {
+    totalSalary: 0,
+  }
+);
+
+// T-028: Is there any employee earning less than 5000?
+// [
+//   { id: 3, name: 'Charlie', departmentId: 3, salary: 4500 },
+//   { id: 9, name: 'Ian', departmentId: 2, salary: 4800 }
+// ]
+const lessSalary = employees.filter((less) => less.salary < 5000);
+
+// T-029: Find the first employee who earns exactly 5100.
+const firstEmployee = employees.find((salary) => salary.salary === 5100);
+console.log(firstEmployee);
