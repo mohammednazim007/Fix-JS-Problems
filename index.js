@@ -23,4 +23,4 @@ const departments = [
 const engineeringEmployees = departments.filter(
   (employee) => employee.name === "Engineering"
 );
-console.log(engineeringEmployees);
+// [ { id: 2, name: 'Engineering' } ]
