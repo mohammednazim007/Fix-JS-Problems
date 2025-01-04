@@ -150,4 +150,12 @@ const displayEmployeeName = employees.map((emp) => {
 const employeeArray = employees.map((employee) => {
   return `${employee.name} - ${departments[employee.departmentId - 1].name}`;
 });
-console.log(employeeArray);
+
+// T-037: Increment each employee's salary by 10%
+const incrementSalary = employees.map((employee) => {
+  return {
+    ...employee,
+    salary: Math.ceil(employee.salary * 1.1),
+  };
+});
+console.log(incrementSalary);
