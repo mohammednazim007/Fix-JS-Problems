@@ -142,7 +142,12 @@ const validUser = employees.filter((employeeUser) =>
 
 // T-035: Log each employee's name and department name to the console.
 // ["Alice - HR","Bob - Engineering","Charlie - Marketing","Diana - HR","Fiona - Sales"];
-
 const displayEmployeeName = employees.map((emp) => {
   return `${emp.name} - ${departments[emp.departmentId - 1].name}`;
 });
+
+//  T-036: Extract all employee skill names into a single array.
+const employeeArray = employees.map((employee) => {
+  return `${employee.name} - ${departments[employee.departmentId - 1].name}`;
+});
+console.log(employeeArray);
