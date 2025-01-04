@@ -158,4 +158,13 @@ const incrementSalary = employees.map((employee) => {
     salary: Math.ceil(employee.salary * 1.1),
   };
 });
-console.log(incrementSalary);
+
+// second way
+const secondIncreaseSalary = employees.reduce((acc, curr) => {
+  acc.push({
+    ...curr,
+    salary: Math.ceil(curr.salary * 1.1),
+  });
+  return acc;
+}, []);
+console.log(secondIncreaseSalary);
