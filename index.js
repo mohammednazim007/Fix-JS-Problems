@@ -260,3 +260,12 @@ const engTotalSalary = allEngineer.reduce((acc, current) => {
   return acc;
 }, 0);
 
+// T-040: Check if there is any department where all employees earn more than 5000.
+// Group employees by department
+const groupedByDepartment = departments.map((user) => ({
+  departmentName: user.name,
+  departmentsSalary: employees
+    .filter((userEmployee) => userEmployee.departmentId === user.id)
+    .every((sl) => sl.salary > 5000),
+}));
+const biggest = groupedByDepartment.find((dept) => dept.departmentsSalary);
