@@ -169,78 +169,78 @@ const departments = [
 // }, []);
 
 // // ===============================================
-// const employeesWithSkills = [
-//   {
-//     id: 1,
-//     name: "Alice",
-//     departmentId: 1,
-//     salary: 5000,
-//     skills: ["Excel", "Management"],
-//   },
-//   {
-//     id: 2,
-//     name: "Bob",
-//     departmentId: 2,
-//     salary: 7000,
-//     skills: ["JavaScript", "React"],
-//   },
-//   {
-//     id: 3,
-//     name: "Charlie",
-//     departmentId: 3,
-//     salary: 4500,
-//     skills: ["Python", "Data Analysis"],
-//   },
-//   {
-//     id: 4,
-//     name: "Diana",
-//     departmentId: 1,
-//     salary: 5500,
-//     skills: ["Leadership", "Time Management"],
-//   },
-//   {
-//     id: 5,
-//     name: "Edward",
-//     departmentId: 2,
-//     salary: 8000,
-//     skills: ["Sales", "Negotiation"],
-//   },
-//   {
-//     id: 6,
-//     name: "Fiona",
-//     departmentId: 4,
-//     salary: 6000,
-//     skills: ["Java", "Spring"],
-//   },
-//   {
-//     id: 7,
-//     name: "George",
-//     departmentId: 3,
-//     salary: 5200,
-//     skills: ["SQL", "Database Design"],
-//   },
-//   {
-//     id: 8,
-//     name: "Helen",
-//     departmentId: 4,
-//     salary: 7200,
-//     skills: ["Marketing", "SEO"],
-//   },
-//   {
-//     id: 9,
-//     name: "Ian",
-//     departmentId: 2,
-//     salary: 4800,
-//     skills: ["AWS", "DevOps"],
-//   },
-//   {
-//     id: 10,
-//     name: "Jane",
-//     departmentId: 1,
-//     salary: 5100,
-//     skills: ["UI/UX Design", "Prototyping"],
-//   },
-// ];
+const employeesWithSkills = [
+  {
+    id: 1,
+    name: "Alice",
+    departmentId: 1,
+    salary: 5000,
+    skills: ["Excel", "Management"],
+  },
+  {
+    id: 2,
+    name: "Bob",
+    departmentId: 2,
+    salary: 7000,
+    skills: ["JavaScript", "React", "Excel", "Management"],
+  },
+  {
+    id: 3,
+    name: "Charlie",
+    departmentId: 3,
+    salary: 4500,
+    skills: ["Python", "Data Analysis", "Excel", "Management"],
+  },
+  {
+    id: 4,
+    name: "Diana",
+    departmentId: 1,
+    salary: 5500,
+    skills: ["Leadership", "Time Management"],
+  },
+  {
+    id: 5,
+    name: "Edward",
+    departmentId: 2,
+    salary: 8000,
+    skills: ["Sales", "Python", "Data Analysis", "Negotiation"],
+  },
+  {
+    id: 6,
+    name: "Fiona",
+    departmentId: 4,
+    salary: 6000,
+    skills: ["Java", "Spring", "Python", "Data Analysis"],
+  },
+  {
+    id: 7,
+    name: "George",
+    departmentId: 3,
+    salary: 5200,
+    skills: ["SQL", "Database Design"],
+  },
+  {
+    id: 8,
+    name: "Helen",
+    departmentId: 4,
+    salary: 7200,
+    skills: ["Marketing", "SEO"],
+  },
+  {
+    id: 9,
+    name: "Ian",
+    departmentId: 2,
+    salary: 4800,
+    skills: ["AWS", "DevOps"],
+  },
+  {
+    id: 10,
+    name: "Jane",
+    departmentId: 1,
+    salary: 5100,
+    skills: ["UI/UX Design", "Prototyping"],
+  },
+];
 // // T-038: Assume each employee can have multiple skills. Create an array of employee skills and flatten them.
 // //  Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
 // const multipleSkillsArray = employeesWithSkills
@@ -269,3 +269,9 @@ const groupedByDepartment = departments.map((user) => ({
     .every((sl) => sl.salary > 5000),
 }));
 const biggest = groupedByDepartment.find((dept) => dept.departmentsSalary);
+
+// 041: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }). Find the total number of unique projects being handled across all employees.
+
+const employeeUsers = employeesWithSkills.flatMap((skills) => skills.skills);
+const uniqueArray = [...new Set(employeeUsers)];
+
