@@ -275,3 +275,12 @@ const biggest = groupedByDepartment.find((dept) => dept.departmentsSalary);
 const employeeUsers = employeesWithSkills.flatMap((skills) => skills.skills);
 const uniqueArray = [...new Set(employeeUsers)];
 
+// second way
+const skillsReducer = employeesWithSkills.reduce((acc, current) => {
+  current.skills.forEach((item) => {
+    if (!acc.includes(item)) {
+      acc.push(item);
+    }
+  });
+  return acc;
+}, []);
