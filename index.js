@@ -303,6 +303,11 @@ for (const employee of employees) {
 // 045: Using a for-of loop, print the names of employees earning more than 5000.
 for (const employee of employees) {
   if (employee.salary < 5000) {
-    console.log(`${employee.name}`, `${employee.salary}`);
+    // console.log(`${employee.name}`, `${employee.salary}`);
   }
+}
+
+// 046: Modify the for-of loop to destructure each employee object and log their name and salary.
+for (const { name, salary } of employees) {
+  console.log(name, salary);
 }
