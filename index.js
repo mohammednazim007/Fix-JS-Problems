@@ -312,8 +312,13 @@ for (const { name, salary } of employees) {
   // console.log(name, salary);
 }
 
-// Write a for-of loop to match employees with their departments and print the results.
+// 047: Write a for-of loop to match employees with their departments and print the results.
 for (const { name, departmentId } of employees) {
   const department = departments.find((dept) => dept.id === departmentId);
-  console.log(`${name} - ${department.name}`);
+  // console.log(`${name} - ${department.name}`);
+}
+
+// 048: Use Array.prototype.entries() with a for-of loop to print the index and name of each employee.
+for (const [index, employee] of employees.entries()) {
+  console.log(index, employee.name);
 }
