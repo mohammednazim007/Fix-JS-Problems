@@ -271,7 +271,6 @@ const groupedByDepartment = departments.map((user) => ({
 const biggest = groupedByDepartment.find((dept) => dept.departmentsSalary);
 
 // 041: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }). Find the total number of unique projects being handled across all employees.
-
 const employeeUsers = employeesWithSkills.flatMap((skills) => skills.skills);
 const uniqueArray = [...new Set(employeeUsers)];
 
@@ -284,3 +283,12 @@ const skillsReducer = employeesWithSkills.reduce((acc, current) => {
   });
   return acc;
 }, []);
+
+// -042: For each employee, find their department name and return an array of employee names with their department names.
+const employeeDepartment = employees.map((employee) => {
+  return {
+    name: employee.name,
+    department: departments[employee.departmentId - 1].name,
+  };
+});
+console.log(employeeDepartment);
