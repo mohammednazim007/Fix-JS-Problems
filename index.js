@@ -297,5 +297,12 @@ const earnMoreThan6000 = employees.filter((employee) => employee.salary > 6000);
 
 // 044: Write a for-of loop to print the names of all employees from the employees array.
 for (const employee of employees) {
-  console.log(employee.name);
+  // console.log(employee.name);
+}
+
+// 045: Using a for-of loop, print the names of employees earning more than 5000.
+for (const employee of employees) {
+  if (employee.salary < 5000) {
+    console.log(`${employee.name}`, `${employee.salary}`);
+  }
 }
