@@ -309,5 +309,11 @@ for (const employee of employees) {
 
 // 046: Modify the for-of loop to destructure each employee object and log their name and salary.
 for (const { name, salary } of employees) {
-  console.log(name, salary);
+  // console.log(name, salary);
+}
+
+// Write a for-of loop to match employees with their departments and print the results.
+for (const { name, departmentId } of employees) {
+  const department = departments.find((dept) => dept.id === departmentId);
+  console.log(`${name} - ${department.name}`);
 }
