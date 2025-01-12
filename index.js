@@ -291,4 +291,7 @@ const employeeDepartment = employees.map((employee) => {
     department: departments[employee.departmentId - 1].name,
   };
 });
-console.log(employeeDepartment);
+
+// 043: Get a list of names of employees earning more than 6000.
+const earnMoreThan6000 = employees.filter((employee) => employee.salary > 6000);
+console.log(earnMoreThan6000);
