@@ -341,3 +341,9 @@ const secondMergedArray = [...arr1, ...arr2];
 // console.log(mergedArray); // [1, 2, 3, 4]
 // console.log(secondMergedArray); // [1, 2, 3, 4]
 
+// 053: Create an array of n duplicate values using Array.from. Input: Create an array with 5 "A" values. Output: ["A", "A", "A", "A", "A"]
+const arr = Array.from({ length: 5 }, () => "A");
+
+// second way
+const array2 = Array(5).fill("A");
+
