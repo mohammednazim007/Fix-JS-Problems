@@ -347,3 +347,7 @@ const arr = Array.from({ length: 5 }, () => "A");
 // second way
 const array2 = Array(5).fill("A");
 
+// 054: Use Array.from to convert a string like "Hello" into an array of characters.
+const str = "Hello";
+const arrString = Array.from(str);
+console.log(arrString); // ["H", "e", "l", "l", "o"]
