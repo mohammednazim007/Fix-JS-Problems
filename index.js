@@ -320,5 +320,10 @@ for (const { name, departmentId } of employees) {
 
 // 048: Use Array.prototype.entries() with a for-of loop to print the index and name of each employee.
 for (const [index, employee] of employees.entries()) {
-  console.log(index, employee.name);
+  // console.log(index, employee.name);
 }
+
+// 049: Given the array-like object below, access the second element and log it
+const arrayLike = { 0: "First", 1: "Second", length: 2 };
+const arrayResult = arrayLike[1];
+const isArray = Array.from(arrayLike);
