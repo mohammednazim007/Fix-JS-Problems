@@ -327,3 +327,8 @@ for (const [index, employee] of employees.entries()) {
 const arrayLike = { 0: "First", 1: "Second", length: 2 };
 const arrayResult = arrayLike[1];
 const isArray = Array.from(arrayLike);
+
+// 051: Write a snippet to select all div elements on a webpage (using document.querySelectorAll) and convert the resulting NodeList into an array.
+const divs = document?.querySelectorAll("div");
+const nodeList = Array.from(divs);
+// console.log(nodeList); ❌
