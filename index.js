@@ -329,6 +329,15 @@ const arrayResult = arrayLike[1];
 const isArray = Array.from(arrayLike);
 
 // 051: Write a snippet to select all div elements on a webpage (using document.querySelectorAll) and convert the resulting NodeList into an array.
-const divs = document?.querySelectorAll("div");
-const nodeList = Array.from(divs);
+// const divs = document?.querySelectorAll("div");
+// const nodeList = Array.from(divs);
 // console.log(nodeList); ❌
+
+// 052: Merge these two arrays into a single array:
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const mergedArray = arr1.concat(arr2);
+const secondMergedArray = [...arr1, ...arr2];
+// console.log(mergedArray); // [1, 2, 3, 4]
+// console.log(secondMergedArray); // [1, 2, 3, 4]
+
