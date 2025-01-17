@@ -359,5 +359,9 @@ console.timeEnd("055");
 
 // 056: find the array last value which is take less memory & execution time
 console.time("056");
-const lastValue2 = [1, 2, 3, 4, 5][4];
+const arrayValue = [1, 2, 3, 4, 5];
+const lastValue2 = arrayValue.unshift();
+console.log(lastValue2);
+console.log("lastValue2", arrayValue);
+
 console.timeEnd("056");
