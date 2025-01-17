@@ -353,12 +353,24 @@ const arrString = Array.from(str);
 // console.log(arrString); // ["H", "e", "l", "l", "o"]
 
 // 055: find the array last value with (at)
-console.time("055");
-const lastValue = [1, 2, 3, 4, 5,55].at(-1);
-console.timeEnd("055");
+// console.time("055");
+// const lastValue = [1, 2, 3, 4, 5,55].at(-1);
+// console.timeEnd("055");
 
 // 056: find the array last value which is take less memory & execution time
-console.time("056");
-const arrayValue = [1, 2, 3, 4, 5];
-const lastValue2 = arrayValue.unshift();
-console.timeEnd("056");
+// console.time("056");
+// const arrayValue = [1, 2, 3, 4, 5];
+// const lastValue2 = arrayValue.unshift();
+// console.timeEnd("056");
+
+// Write a JavaScript function to check whether an `input` is an array or not.
+const isArrayFn = (input) => {
+  return Array.isArray(input);
+};
+
+
+// Write a JavaScript function to check whether an `input` is an object or not.
+const isObject = (input) => {
+  return typeof input === "object" && input !== null;
+};
+
