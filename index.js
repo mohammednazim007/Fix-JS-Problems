@@ -363,14 +363,19 @@ const arrString = Array.from(str);
 // const lastValue2 = arrayValue.unshift();
 // console.timeEnd("056");
 
-// Write a JavaScript function to check whether an `input` is an array or not.
+//  57:Write a JavaScript function to check whether an `input` is an array or not.
 const isArrayFn = (input) => {
   return Array.isArray(input);
 };
 
 
-// Write a JavaScript function to check whether an `input` is an object or not.
+// 058: Write a JavaScript function to check whether an `input` is an object or not.
 const isObject = (input) => {
   return typeof input === "object" && input !== null;
 };
 
+// 059: Write a JavaScript function to clone an array it could be nested.
+const cloneArray = (input=[]) => {
+  return input.slice(0);
+};
+// console.log(cloneArray([1, 2, 3,[4,5,[6]]]));
