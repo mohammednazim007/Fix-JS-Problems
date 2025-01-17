@@ -350,4 +350,14 @@ const array2 = Array(5).fill("A");
 // 054: Use Array.from to convert a string like "Hello" into an array of characters.
 const str = "Hello";
 const arrString = Array.from(str);
-console.log(arrString); // ["H", "e", "l", "l", "o"]
+// console.log(arrString); // ["H", "e", "l", "l", "o"]
+
+// 055: find the array last value with (at)
+console.time("055");
+const lastValue = [1, 2, 3, 4, 5].at(-1);
+console.timeEnd("055");
+
+// 056: find the array last value which is take less memory & execution time
+console.time("056");
+const lastValue2 = [1, 2, 3, 4, 5][4];
+console.timeEnd("056");
