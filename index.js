@@ -354,14 +354,11 @@ const arrString = Array.from(str);
 
 // 055: find the array last value with (at)
 console.time("055");
-const lastValue = [1, 2, 3, 4, 5].at(-1);
+const lastValue = [1, 2, 3, 4, 5,55].at(-1);
 console.timeEnd("055");
 
 // 056: find the array last value which is take less memory & execution time
 console.time("056");
 const arrayValue = [1, 2, 3, 4, 5];
 const lastValue2 = arrayValue.unshift();
-console.log(lastValue2);
-console.log("lastValue2", arrayValue);
-
 console.timeEnd("056");
