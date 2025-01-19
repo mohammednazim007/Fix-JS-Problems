@@ -440,15 +440,21 @@ const mostFrequent = [
   9,
   3,
 ];
-const mostFrequentItem = mostFrequent.reduce((acc, curr) => {
-  let count = 0;
-  acc[curr] = (acc[curr] || 0) + 1;
 
-  if (acc[curr] > count) {
-    count = acc[curr];
-    item = curr;
-  }
-  return acc;
-}, {});
-console.log(mostFrequentItem);
+// second way 
+const mostFrequentItem = mostFrequent.reduce(
+  (acc, curr) => {
+    acc.elements[curr] = (acc.elements[curr] || 0) + 1;
 
+    // Update the most frequent item and its count
+    if (acc.elements[curr] > acc.maxCount) {
+      acc.maxCount = acc.elements[curr];
+      acc.item = curr;
+    }
+
+    return acc;
+  },
+  { elements: {}, maxCount: 0, item: null }
+);
+
+// console.log(mostFrequentItem);
