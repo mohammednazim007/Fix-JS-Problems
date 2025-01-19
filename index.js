@@ -412,7 +412,43 @@ const numberToDashes = (num) => {
 };
 
 // 064:Write a JavaScript program to sort the items of an array.
-const strArray = [-3, 8, 7, 6, 5, -4, 3, 2, 1,"0","-88"];
+const strArray = [-3, 8, 7, 6, 5, -4, 3, 2, 1, "0", "-88"];
 const sortedArray = strArray.sort((a, b) => a - b);
 // console.log(sortedArray);
+
+// 065:Write a JavaScript program to find the most frequent item in an array.
+const mostFrequent = [
+  3,
+  "a",
+  "a",
+  "a",
+  2,
+  3,
+  "a",
+  3,
+  "a",
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  4,
+  9,
+  3,
+];
+const mostFrequentItem = mostFrequent.reduce((acc, curr) => {
+  let count = 0;
+  acc[curr] = (acc[curr] || 0) + 1;
+
+  if (acc[curr] > count) {
+    count = acc[curr];
+    item = curr;
+  }
+  return acc;
+}, {});
+console.log(mostFrequentItem);
 
