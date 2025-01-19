@@ -441,7 +441,6 @@ const mostFrequent = [
   3,
 ];
 
-// second way 
 const mostFrequentItem = mostFrequent.reduce(
   (acc, curr) => {
     acc.elements[curr] = (acc.elements[curr] || 0) + 1;
@@ -456,5 +455,23 @@ const mostFrequentItem = mostFrequent.reduce(
   },
   { elements: {}, maxCount: 0, item: null }
 );
-
 // console.log(mostFrequentItem);
+
+// second way
+const secondMostFrequentFn = (arr) => {
+  let elements = {};
+  let maxCount = 0;
+  let item = null;
+
+  arr.forEach((element) => {
+    elements[element] = (elements[element] || 0) + 1;
+
+    if (elements[element] > maxCount) {
+      maxCount = elements[element];
+      item = element;
+    }
+  });
+
+  return { elements, maxCount, item };
+};
+// console.log(secondMostFrequentFn(mostFrequent));
