@@ -410,4 +410,9 @@ const numberToDashes = (num) => {
   }
   return dashes;
 };
-console.log(numberToDashes("025468"));
+
+// 064:Write a JavaScript program to sort the items of an array.
+const strArray = [-3, 8, 7, 6, 5, -4, 3, 2, 1,"0","-88"];
+const sortedArray = strArray.sort((a, b) => a - b);
+// console.log(sortedArray);
+
