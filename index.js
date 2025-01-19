@@ -21,51 +21,51 @@ const departments = [
 
 // // 21: Can you filter employees who work in the "Engineering" department?
 // // [ { id: 2, name: 'Engineering' } ]
-// const engineeringEmployees = departments.filter(
-//   (employee) => employee.name === "Engineering"
-// );
+const engineeringEmployees = departments.filter(
+  (employee) => employee.name === "Engineering"
+);
 
 // //T-022: Create a new array that combines employee names and department names in the format: "Alice (HR)".
 // //  ['Alice - (HR)','Bob - (Engineering)']
-// const combinedArray = employees.map((employee) => {
-//   return `${employee.name} - (${departments[employee.departmentId - 1].name})`;
-// });
+const combinedArray = employees.map((employee) => {
+  return `${employee.name} - (${departments[employee.departmentId - 1].name})`;
+});
 
 // // second way
-// const combinedArray2 = employees.reduce((acc, employee) => {
-//   acc.push(
-//     `${employee.name} - (${departments[employee.departmentId - 1].name})`
-//   );
-//   return acc;
-// }, []);
+const combinedArray2 = employees.reduce((acc, employee) => {
+  acc.push(
+    `${employee.name} - (${departments[employee.departmentId - 1].name})`
+  );
+  return acc;
+}, []);
 
 // //T-023: Find the highest salary among employees.
 // // 8000
-// const highestSalary = employees.reduce((acc, employee) => {
-//   return employee.salary < acc ? acc : employee.salary;
-// }, 0);
+const highestSalary = employees.reduce((acc, employee) => {
+  return employee.salary < acc ? acc : employee.salary;
+}, 0);
 
 // // second way
-// const highestSalary2 = employees.reduce((acc, employee) => {
-//   return Math.max(acc, employee.salary);
-// }, 0);
+const highestSalary2 = employees.reduce((acc, employee) => {
+  return Math.max(acc, employee.salary);
+}, 0);
 
 // // third way
-// const highestSalary3 = Math.max(
-//   ...employees.map((employee) => employee.salary)
-// );
+const highestSalary3 = Math.max(
+  ...employees.map((employee) => employee.salary)
+);
 
 // //T-024: Check if there is at least one employee in the "Sales" department.
 // // filter method will return all match value (if multiple value exist)
 // // [ { id: 4, name: 'Sales' } ]
-// const oneSalesEmployee = departments.filter(
-//   (employees) => employees.name.toLocaleLowerCase() === "sales"
-// );
+const oneSalesEmployee = departments.filter(
+  (employees) => employees.name.toLocaleLowerCase() === "sales"
+);
 
 // // in JS (find) method is used to search for the first element
-// const secondSales = departments.find(
-//   (salesman) => salesman?.name?.toLocaleLowerCase() === "sales"
-// );
+const secondSales = departments.find(
+  (salesman) => salesman?.name?.toLocaleLowerCase() === "sales"
+);
 
 // // T-025: Write a function to filter employees earning more than 6000.
 // // [
@@ -74,7 +74,7 @@ const departments = [
 // //   { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
 // //   { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
 // // ];
-// const biggestSalary = employees.filter((salary) => salary.salary >= 6000);
+const biggestSalary = employees.filter((salary) => salary.salary >= 6000);
 
 // // T-026: Create an array of employee names only.
 // // [
@@ -83,46 +83,46 @@ const departments = [
 // //   'Edward',  'Fiona',
 // //   'George',  'Helen',
 // // ]
-// const employeeNameArray = employees.map((employees) => `${employees?.name}`);
+const employeeNameArray = employees.map((employees) => `${employees?.name}`);
 
 // // T-027: Calculate the total salary of all employees using
 // // 58300
-// const employeeTotalSalary = employees?.reduce((accumulator, current) => {
-//   accumulator += current.salary;
-//   return accumulator;
-// }, 0);
+const employeeTotalSalary = employees?.reduce((accumulator, current) => {
+  accumulator += current.salary;
+  return accumulator;
+}, 0);
 
 // // second way
 // // { totalSalary: 58300 }
-// const secondTotalSalary = employees.reduce(
-//   (acc, current) => {
-//     acc.totalSalary += current.salary;
-//     return acc;
-//   },
-//   {
-//     totalSalary: 0,
-//   }
-// );
+const secondTotalSalary = employees.reduce(
+  (acc, current) => {
+    acc.totalSalary += current.salary;
+    return acc;
+  },
+  {
+    totalSalary: 0,
+  }
+);
 
 // // T-028: Is there any employee earning less than 5000?
 // // [
 // //   { id: 3, name: 'Charlie', departmentId: 3, salary: 4500 },
 // //   { id: 9, name: 'Ian', departmentId: 2, salary: 4800 }
 // // ]
-// const lessSalary = employees.filter((less) => less.salary < 5000);
+const lessSalary = employees.filter((less) => less.salary < 5000);
 
 // // T-029: Find the first employee who earns exactly 5100.
 // // { id: 10, name: 'Jane', departmentId: 1, salary: 5100 }
-// const firstEarnEmployee = employees.find((salary) => salary.salary === 5100);
+const firstEarnEmployee = employees.find((salary) => salary.salary === 5100);
 
 // // T-030: Find the last employee in the "HR" department.
-// const findLastEmployeeId = departments.find(
-//   (emp) => emp.name.toLowerCase() === "hr"
-// ).id;
-// const lastHREmployee = employees.filter(
-//   (last) => last.id === findLastEmployeeId
-// );
-// const lastEmployee = departments[lastHREmployee.length - 1];
+const findLastEmployeeId = departments.find(
+  (emp) => emp.name.toLowerCase() === "hr"
+).id;
+const lastHREmployee = employees.filter(
+  (last) => last.id === findLastEmployeeId
+);
+const lastEmployee = departments[lastHREmployee.length - 1];
 
 // // T-031: Find the first employee in the "Marketing" department.
 // // [ { id: 3, name: 'Charlie', departmentId: 3, salary: 4500 } ]
@@ -135,38 +135,38 @@ const departments = [
 // );
 
 // // T-034: Verify if all employees belong to a department listed in the departments array.
-// const validUsers = departments.map((department) => department.id);
-// const validUser = employees.filter((employeeUser) =>
-//   validUsers.includes(employeeUser.departmentId)
-// );
+const validUsers = departments.map((department) => department.id);
+const validUser = employees.filter((employeeUser) =>
+  validUsers.includes(employeeUser.departmentId)
+);
 
 // // T-035: Log each employee's name and department name to the console.
 // // ["Alice - HR","Bob - Engineering","Charlie - Marketing","Diana - HR","Fiona - Sales"];
-// const displayEmployeeName = employees.map((emp) => {
-//   return `${emp.name} - ${departments[emp.departmentId - 1].name}`;
-// });
+const displayEmployeeName = employees.map((emp) => {
+  return `${emp.name} - ${departments[emp.departmentId - 1].name}`;
+});
 
 // //  T-036: Extract all employee skill names into a single array.
-// const employeeArray = employees.map((employee) => {
-//   return `${employee.name} - ${departments[employee.departmentId - 1].name}`;
-// });
+const employeeArray = employees.map((employee) => {
+  return `${employee.name} - ${departments[employee.departmentId - 1].name}`;
+});
 
 // // T-037: Increment each employee's salary by 10%
-// const incrementSalary = employees.map((employee) => {
-//   return {
-//     ...employee,
-//     salary: Math.ceil(employee.salary * 1.1),
-//   };
-// });
+const incrementSalary = employees.map((employee) => {
+  return {
+    ...employee,
+    salary: Math.ceil(employee.salary * 1.1),
+  };
+});
 
 // // second way
-// const secondIncreaseSalary = employees.reduce((acc, curr) => {
-//   acc.push({
-//     ...curr,
-//     salary: Math.ceil(curr.salary * 1.1),
-//   });
-//   return acc;
-// }, []);
+const secondIncreaseSalary = employees.reduce((acc, curr) => {
+  //   acc.push({
+  //     ...curr,
+  //     salary: Math.ceil(curr.salary * 1.1),
+  //   });
+  //   return acc;
+}, []);
 
 // // ===============================================
 const employeesWithSkills = [
@@ -243,12 +243,12 @@ const employeesWithSkills = [
 ];
 // // T-038: Assume each employee can have multiple skills. Create an array of employee skills and flatten them.
 // //  Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
-// const multipleSkillsArray = employeesWithSkills
-//   .map((skills) => skills.skills)
-//   .flat();
+const multipleSkillsArray = employeesWithSkills
+  .map((skills) => skills.skills)
+  .flat();
 
 // // second way
-// const secondSkillArray = employeesWithSkills.flatMap((item) => item.skills);
+const secondSkillArray = employeesWithSkills.flatMap((item) => item.skills);
 
 // // T-039: Find the total salary of all employees working in the "Engineering" department.
 const engineerId = departments.find((user) => user.name === "Engineering").id;
@@ -354,13 +354,13 @@ const arrString = Array.from(str);
 
 // 055: find the array last value with (at)
 // console.time("055");
-// const lastValue = [1, 2, 3, 4, 5,55].at(-1);
+const lastValue = [1, 2, 3, 4, 5, 55].at(-1);
 // console.timeEnd("055");
 
 // 056: find the array last value which is take less memory & execution time
 // console.time("056");
-// const arrayValue = [1, 2, 3, 4, 5];
-// const lastValue2 = arrayValue.unshift();
+const arrayValue = [1, 2, 3, 4, 5];
+const lastValue2 = arrayValue.unshift();
 // console.timeEnd("056");
 
 //  57:Write a JavaScript function to check whether an `input` is an array or not.
@@ -400,13 +400,14 @@ const myColorJoined = myColor.join(", ");
 
 // 063: Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number. For example if you accept 025468 the output should be 0-254-6-8.
 const numberToDashes = (num) => {
-  let result = "";
+  let dashes = "";
+
   for (let i = 0; i < num.length; i++) {
-    if (i % 2 === 0) {
-      result += "-";
+    if (num[i - 1] % 2 === 0 && num[i] % 2 === 0) {
+      dashes += "-";
     }
-    result += num[i];
+    dashes += num[i];
   }
-  return result;
+  return dashes;
 };
 console.log(numberToDashes("025468"));
