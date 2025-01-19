@@ -368,14 +368,26 @@ const isArrayFn = (input) => {
   return Array.isArray(input);
 };
 
-
 // 058: Write a JavaScript function to check whether an `input` is an object or not.
 const isObject = (input) => {
   return typeof input === "object" && input !== null;
 };
 
 // 059: Write a JavaScript function to clone an array it could be nested.
-const cloneArray = (input=[]) => {
+const cloneArray = (input = []) => {
   return input.slice(0);
 };
 // console.log(cloneArray([1, 2, 3,[4,5,[6]]]));
+
+// Write a JavaScript function to get the first element of an array. Passing the parameter 'n' will return the first 'n' elements of the array.
+const getFirstElement = (arr, n) => {
+  return arr.slice(0, n);
+};
+
+// Write a JavaScript function to get the last element of an array. Passing the parameter 'n' will return the last 'n' elements of the array.
+const getLastElement = (arr, n) => {
+  return arr.slice(-n);
+};
+
+const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(getFirstElement(firstArray, 8));
