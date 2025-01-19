@@ -379,12 +379,12 @@ const cloneArray = (input = []) => {
 };
 // console.log(cloneArray([1, 2, 3,[4,5,[6]]]));
 
-// Write a JavaScript function to get the first element of an array. Passing the parameter 'n' will return the first 'n' elements of the array.
+// 060: Write a JavaScript function to get the first element of an array. Passing the parameter 'n' will return the first 'n' elements of the array.
 const getFirstElement = (arr, n) => {
   return arr.slice(0, n);
 };
 
-// Write a JavaScript function to get the last element of an array. Passing the parameter 'n' will return the last 'n' elements of the array.
+// 061: Write a JavaScript function to get the last element of an array. Passing the parameter 'n' will return the last 'n' elements of the array.
 const getLastElement = (arr, n) => {
   return arr.slice(-n);
 };
@@ -393,7 +393,20 @@ const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // console.log(getFirstElement(firstArray, 8));
 // console.log(getLastElement(firstArray,3));
 
-// Write a simple JavaScript program to join all elements of the following array into a string.
+// 062: Write a JavaScript function to get the first and last element of an array. Passing the parameter 'n' will return the first 'n' and last 'n' elements of the array.
 const myColor = ["Red", "Green", "White", "Black"];
 const myColorJoined = myColor.join(", ");
 // console.log(myColorJoined);
+
+// 063: Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number. For example if you accept 025468 the output should be 0-254-6-8.
+const numberToDashes = (num) => {
+  let result = "";
+  for (let i = 0; i < num.length; i++) {
+    if (i % 2 === 0) {
+      result += "-";
+    }
+    result += num[i];
+  }
+  return result;
+};
+console.log(numberToDashes("025468"));
