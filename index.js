@@ -475,3 +475,12 @@ const secondMostFrequentFn = (arr) => {
   return { elements, maxCount, item };
 };
 // console.log(secondMostFrequentFn(mostFrequent));
+
+// Write a JavaScript program that accepts a string as input and swaps the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+const swapCase = (str) => {
+  return str
+    .split(" ")
+    .map((char) => char.at(0).toLowerCase() + char.slice(1).toUpperCase());
+};
+
+console.log(swapCase("the quick brown fox"));
