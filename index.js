@@ -482,5 +482,28 @@ const swapCase = (str) => {
     .split(" ")
     .map((char) => char.at(0).toLowerCase() + char.slice(1).toUpperCase());
 };
+// console.log(swapCase("the quick brown fox"));
 
-console.log(swapCase("the quick brown fox"));
+// Write a JavaScript program that prints the elements of the following array.
+// Note : Use nested for loops.
+// Sample Output :
+// "row 0"
+// " 1"
+// " 2"
+// " 1"
+// " 24"
+// "row 1"
+
+const a = [
+  [1, 2, 1, 24],
+  [8, 11, 9, 4],
+  [7, 0, 7, 27],
+  [7, 4, 28, 14],
+  [3, 10, 26, 7],
+];
+const printArray = (arr) => {
+  return arr.map((row, index) => {
+    return ` "row ${index}"` + row.map((item) => ` "${item}"`).join("");
+  });
+};
+// console.log(printArray(a));
