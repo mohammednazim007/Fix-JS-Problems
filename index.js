@@ -548,4 +548,4 @@ const generateColorPosition = (colorArray) => {
   });
 };
 
-console.log(generateColorPosition(colorArray));
+// console.log(generateColorPosition(colorArray));
