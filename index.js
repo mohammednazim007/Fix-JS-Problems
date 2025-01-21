@@ -515,4 +515,37 @@ const removeDuplicateItem = (arr) => {
 };
 // console.log(removeDuplicateItem(duplicateArray));
 
+// We have the following arrays :
+// o = ["th","st","nd","rd"]
+// Write a JavaScript program to display the colors in the following way :
+// "1st choice is Blue ."
+// "2nd choice is Green."
+// "3rd choice is Red."
+const colorArray = [
+  "Blue ",
+  "Green",
+  "Red",
+  "Orange",
+  "Violet",
+  "Indigo",
+  "Yellow ",
+  "Pink",
+  "Purple",
+];
+const suffixes = ["th", "st", "nd", "rd"];
 
+const generateColorPosition = (colorArray) => {
+  return colorArray.map((color, index) => {
+    let position = index + 1;
+    let suffix = suffixes[0]; // Default to "th"
+    console.log(position % 10 === 1);
+
+    if (position % 10 === 1 && position % 100 !== 11) suffix = "st";
+    if (position % 10 === 2 && position % 100 !== 12) suffix = "nd";
+    if (position % 10 === 3 && position % 100 !== 13) suffix = "rd";
+
+    return `${position}${suffix} choice is ${color}.`;
+  });
+};
+
+console.log(generateColorPosition(colorArray));
