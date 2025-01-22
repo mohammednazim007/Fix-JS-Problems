@@ -476,7 +476,7 @@ const secondMostFrequentFn = (arr) => {
 };
 // console.log(secondMostFrequentFn(mostFrequent));
 
-// Write a JavaScript program that accepts a string as input and swaps the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+// 065: Write a JavaScript program that accepts a string as input and swaps the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 const swapCase = (str) => {
   return str
     .split(" ")
@@ -484,7 +484,7 @@ const swapCase = (str) => {
 };
 // console.log(swapCase("the quick brown fox"));
 
-// Write a JavaScript program that prints the elements of the following array.
+// 066: Write a JavaScript program that prints the elements of the following array.
 // Note : Use nested for loops.
 // Sample Output :
 // "row 0"
@@ -508,14 +508,14 @@ const printArray = (arr) => {
 };
 // console.log(printArray(a));
 
-//
+// 067: remove the duplicate item from the array
 const duplicateArray = [1, 2, 3, 4, 5, 7, 8, 7, 8, 9, 10];
 const removeDuplicateItem = (arr) => {
   return new Set(arr);
 };
 // console.log(removeDuplicateItem(duplicateArray));
 
-// We have the following arrays :
+// 068: We have the following arrays :
 // o = ["th","st","nd","rd"]
 // Write a JavaScript program to display the colors in the following way :
 // "1st choice is Blue ."
@@ -538,7 +538,6 @@ const generateColorPosition = (colorArray) => {
   return colorArray.map((color, index) => {
     let position = index + 1;
     let suffix = suffixes[0]; // Default to "th"
-    console.log(position % 10 === 1);
 
     if (position % 10 === 1 && position % 100 !== 11) suffix = "st";
     if (position % 10 === 2 && position % 100 !== 12) suffix = "nd";
@@ -547,5 +546,25 @@ const generateColorPosition = (colorArray) => {
     return `${position}${suffix} choice is ${color}.`;
   });
 };
-
 // console.log(generateColorPosition(colorArray));
+
+// 069 : find the year of leap year
+const isLeapYear = (year) => {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return true;
+  }
+  return false;
+};
+
+const leapYear = (startYear, endYear) => {
+  let leapYear = [];
+
+  for (let i = startYear; i <= endYear; i++) {
+    if (isLeapYear(i)) {
+      leapYear.push(i);
+    }
+  }
+  return leapYear;
+};
+// console.log(leapYear(2000, 2012));
+
