@@ -506,14 +506,14 @@ const printArray = (arr) => {
     return ` "row ${index}"` + row.map((item) => ` "${item}"`).join("");
   });
 };
-console.log(printArray(a));
+// console.log(printArray(a));
 
 //
 const duplicateArray = [1, 2, 3, 4, 5, 7, 8, 7, 8, 9, 10];
 const removeDuplicateItem = (arr) => {
   return new Set(arr);
 };
-console.log(removeDuplicateItem(duplicateArray));
+// console.log(removeDuplicateItem(duplicateArray));
 
 // We have the following arrays :
 // o = ["th","st","nd","rd"]
