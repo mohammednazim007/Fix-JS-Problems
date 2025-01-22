@@ -568,3 +568,20 @@ const leapYear = (startYear, endYear) => {
 };
 // console.log(leapYear(2000, 2012));
 
+// 070: Write a JavaScript program to perform a binary search.
+// Note : A binary search or half-interval search algorithm finds the position of a specified input value within an array sorted by key value.
+const itemsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const binarySearch = (array, key) => {
+  let startNumber = 0;
+  let endNumber = array.length - 1; //finding the last index of the array
+
+  while (startNumber <= endNumber) {
+    let middleNumber = Math.floor((startNumber + endNumber) / 2);
+
+    if (array[middleNumber] === key) return middleNumber;
+    if (array[middleNumber] < key) startNumber = middleNumber + 1;
+    if (array[middleNumber] > key) endNumber = middleNumber - 1;
+  }
+  return -1;
+};
+// console.log(binarySearch(itemsArray, 12));
