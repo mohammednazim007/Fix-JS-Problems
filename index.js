@@ -615,3 +615,10 @@ const differenceArray = (arr1, arr2) => {
   return uniqueArray;
 };
 // console.log(differenceArray([1, 2, 3, 4, 5, 88], [1, [2], [3, [[4]]], [5, 6]]));
+
+// 072: Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.
+const mixArray = [NaN, 0, 15, false, -22, "", undefined, 47, null];
+const removeFalsyValue = (arr) => {
+  return arr.filter((item) => item);
+};
+// console.log(removeFalsyValue(mixArray));
