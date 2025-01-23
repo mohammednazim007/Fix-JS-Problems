@@ -593,3 +593,25 @@ const binarySearch = (array, target) => {
 itemsArray.sort((a, b) => a - b);
 const binarySearchResult = binarySearch(itemsArray, 88);
 // console.log(binarySearchResult);
+
+//  071: Write a JavaScript function to find the difference between two arrays.
+const differenceArray = (arr1, arr2) => {
+  // const oneArray = arr1.flatMap((item) => item); //it's only work for one level deep
+  const oneArray = arr1.flat(Infinity); // it's work for all level deep
+  const secondArray = arr2.flat(Infinity);
+  let uniqueArray = [];
+
+  for (let i = 0; i < oneArray.length; i++) {
+    if (!secondArray.includes(oneArray[i])) {
+      uniqueArray.push(oneArray[i]);
+    }
+  }
+
+  for (let i = 0; i < secondArray.length; i++) {
+    if (!oneArray.includes(secondArray[i])) {
+      uniqueArray.push(secondArray[i]);
+    }
+  }
+  return uniqueArray;
+};
+// console.log(differenceArray([1, 2, 3, 4, 5, 88], [1, [2], [3, [[4]]], [5, 6]]));
