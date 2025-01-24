@@ -622,3 +622,16 @@ const removeFalsyValue = (arr) => {
   return arr.filter((item) => item);
 };
 // console.log(removeFalsyValue(mixArray));
+
+// 073: Write a JavaScript program to find a pair of elements (indices of the two numbers) in a given array whose sum equals a specific target number.
+const complexArray = [1, [2], [3, [[4]]], [5, 6, [50]]];
+const targetItem = (array, key) => {
+  const simpleArray = array.flat(Infinity);
+  const target = simpleArray.filter((item) => item === key);
+
+  if (target.length === 0) {
+    return -1;
+  }
+  return target;
+};
+console.log(targetItem(complexArray, 50));
