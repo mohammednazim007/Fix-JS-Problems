@@ -634,4 +634,11 @@ const targetItem = (array, key) => {
   }
   return target;
 };
-console.log(targetItem(complexArray, 50));
+// console.log(targetItem(complexArray, 50));
+
+// 074:Write a JavaScript function to retrieve the value of a given property from all elements in an array.
+// Expected result : [15, -22, 47]
+const retrieveValue = (array) => {
+  return array.filter((item) => item);
+};
+console.log(retrieveValue([NaN, 0, 15, false, -22, "", undefined, 47, null]));
