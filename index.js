@@ -641,4 +641,21 @@ const targetItem = (array, key) => {
 const retrieveValue = (array) => {
   return array.filter((item) => item);
 };
-console.log(retrieveValue([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+// console.log(retrieveValue([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+
+// 075: Write a JavaScript function to find the longest common starting substring in a set of strings.
+const longestCommonStartingSubstring = (array) => {
+  const sortedArray = array.sort();
+  const firstItem = sortedArray[0];
+  const lastItem = sortedArray[sortedArray.length - 1];
+  let i = 0;
+
+  while (i < firstItem.length && firstItem.charAt(i) === lastItem.charAt(i)) {
+    console.log(firstItem.charAt(i));
+    
+    i++;
+  }
+
+  return firstItem.substring(0, i);
+};
+console.log(longestCommonStartingSubstring(["google", "good", "god"]));
