@@ -651,11 +651,9 @@ const longestCommonStartingSubstring = (array) => {
   let i = 0;
 
   while (i < firstItem.length && firstItem.charAt(i) === lastItem.charAt(i)) {
-    console.log(firstItem.charAt(i));
-    
     i++;
   }
 
   return firstItem.substring(0, i);
 };
-console.log(longestCommonStartingSubstring(["google", "good", "god"]));
+// console.log(longestCommonStartingSubstring(["google", "good", "god"]));
