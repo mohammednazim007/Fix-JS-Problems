@@ -664,3 +664,9 @@ const mergeArray = (arr1, arr2) => {
   return [...new Set(mergedArray)];
 };
 // console.log(mergeArray([1, 2, 30,55], [2, 30, 1]));
+
+// 077 : Write a JavaScript function to remove a specific element from an array
+const removeElement = (array, element) => {
+  return array.filter((item) => item !== element);
+};
+console.log(removeElement([1, 2, 3, 4, 5], 3));
