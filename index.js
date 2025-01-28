@@ -677,3 +677,9 @@ const nthLargestElement = (array, n) => {
   return sortedArray[sortedArray.length - n];
 };
 // console.log(nthLargestElement([ 43, 56, 23, 89, 88, 90, 99, 652], 3));
+
+// 077: Write a JavaScript function to create a specified number of elements with a pre-filled numeric value array.
+const preFilledArray = (n, value) => {
+  return Array(n).fill(value);
+};
+// console.log(preFilledArray(6, 0));
