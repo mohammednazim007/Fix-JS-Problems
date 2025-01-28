@@ -683,3 +683,20 @@ const preFilledArray = (n, value) => {
   return Array(n).fill(value);
 };
 // console.log(preFilledArray(6, 0));
+
+// 078:Write a JavaScript function to move an array element from one position to another.
+/**
+ *
+ * @param {array} array
+ * @param {target} from
+ * @param {move position} to
+ * @returns
+ */
+const moveArrayElement = (array, from, to) => {
+  if (array.length < from || array.length < to) {
+    return -1;
+  }
+  array.splice(to, 0, array.splice(from, 1)[0]);
+  return array;
+};
+// console.log(moveArrayElement([10, 20, 30, 40, 50], 0, 2));
