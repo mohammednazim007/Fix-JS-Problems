@@ -657,3 +657,10 @@ const longestCommonStartingSubstring = (array) => {
   return firstItem.substring(0, i);
 };
 // console.log(longestCommonStartingSubstring(["google", "good", "god"]));
+
+// 076: Write a JavaScript function that merges two arrays and removes all duplicate elements.
+const mergeArray = (arr1, arr2) => {
+  const mergedArray = arr1.concat(arr2);
+  return [...new Set(mergedArray)];
+};
+// console.log(mergeArray([1, 2, 30,55], [2, 30, 1]));
