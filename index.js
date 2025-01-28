@@ -669,4 +669,11 @@ const mergeArray = (arr1, arr2) => {
 const removeElement = (array, element) => {
   return array.filter((item) => item !== element);
 };
-console.log(removeElement([1, 2, 3, 4, 5], 3));
+// console.log(removeElement([1, 2, 3, 4, 5], 3));
+
+// 076: Write a JavaScript function to get the nth largest element from an unsorted array.
+const nthLargestElement = (array, n) => {
+  const sortedArray = array.sort((a, b) => a - b);
+  return sortedArray[sortedArray.length - n];
+};
+// console.log(nthLargestElement([ 43, 56, 23, 89, 88, 90, 99, 652], 3));
