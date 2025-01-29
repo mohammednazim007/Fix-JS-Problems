@@ -741,3 +741,21 @@ const zipArray = (array) => {
 //     [true, false],
 //   ])
 // );
+
+// 081: Write a JavaScript function to create an object from an array, using the specified key and excluding it from each value.
+const createObject = (array, key) => {
+  return array.reduce((acc, curr) => {
+    acc[curr[key]] = curr;
+    delete acc[curr[key]][key];
+    return acc;
+  }, {});
+};
+// console.log(
+//   createObject(
+//     [
+//       { id: 1, name: "Alice", age: 40 },
+//       { id: 2, name: "Bob", age: 30 },
+//     ],
+//     "id"
+//   )
+// );
