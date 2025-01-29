@@ -700,3 +700,16 @@ const moveArrayElement = (array, from, to) => {
   return array;
 };
 // console.log(moveArrayElement([10, 20, 30, 40, 50], 0, 2));
+
+// 079: Write a JavaScript function to generate an array of integer numbers, increasing one from the starting position, of a specified length.
+/**
+ *
+ * @param {length} length
+ * @param {start position} start
+ * @returns
+ */
+const generateArray = (start, length) => {
+  return Array.from({ length }, (_, index) => index + start);
+};
+// console.log(generateArray(5, 3));
+
