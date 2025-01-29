@@ -711,5 +711,33 @@ const moveArrayElement = (array, from, to) => {
 const generateArray = (start, length) => {
   return Array.from({ length }, (_, index) => index + start);
 };
-// console.log(generateArray(5, 3));
+// console.log(generateArray(-5, 8));
 
+// 080: Write a JavaScript function to create an array of arrays, ungrouping the elements in an array produced by zip.
+const zipArray = (array) => {
+  let result = [];
+  let str = [];
+  let int = [];
+  let bool = [];
+  const maxLength = array.flat(Infinity);
+
+  maxLength.filter((item) => {
+    if (typeof item === "string") {
+      str.push(item);
+    } else if (typeof item === "number") {
+      int.push(item);
+    } else if (typeof item === "boolean" || item === null) {
+      bool.push(item);
+    }
+  });
+  result.push(str, int, bool);
+  return result;
+};
+
+// console.log(
+//   zipArray([
+//     [1, 2, true, "s", 3],
+//     ["a", "b", true, 8, null, "c"],
+//     [true, false],
+//   ])
+// );
