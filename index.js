@@ -780,3 +780,37 @@ const permutationsArray = (array) => {
   return result;
 };
 // console.log(permutationsArray([2,4]));
+
+// 083: Write a JavaScript program to remove all false values from an object or nested array.
+// expected output: {"c":true,"e":1,"g":"a","h":[true,1,"a"],"i":{"l":"a"}}
+function removeFalseValues(obj) {
+  if (Array.isArray(obj)) {
+    return obj.map(removeFalseValues).filter(Boolean);
+  } else if (typeof obj === "object" && obj !== null) {
+    return Object.fromEntries(
+      Object.entries(obj)
+        .map(([key, value]) => [key, removeFalseValues(value)])
+        .filter(([_, value]) => Boolean(value) || value === true)
+    );
+  }
+  return obj;
+}
+
+const input = {
+  a: false,
+  b: 0,
+  c: true,
+  d: "",
+  e: 1,
+  f: null,
+  g: "a",
+  h: [false, 0, true, "", 1, null, "a", undefined],
+  i: {
+    j: false,
+    k: 0,
+    l: "a",
+    m: null,
+  },
+};
+
+console.log(removeFalseValues(input));
