@@ -835,3 +835,12 @@ const sumOfNumbers = (array) => {
   );
 };
 // console.log(sumOfNumbers([1, 2, "50", "77", "a", "b", 3, 4, "c"])); // 10
+
+// 086: A factor chain is an array in which the previous element is a factor of the next consecutive element. The following is a factor chain:
+// [2, 4, 8, 16, 32]
+const factorChain = (array) => {
+  return array.every((num, index, arr) => {
+    return index === 0 || num % arr[index - 1] === 0;
+  });
+};
+// console.log(factorChain([2, 4, 8, 16, 32,65]));
