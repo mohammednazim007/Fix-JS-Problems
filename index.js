@@ -814,3 +814,15 @@ const input = {
 };
 
 // console.log(removeFalseValues(input));
+
+// 084: Write a JavaScript program that takes an array of integers and returns false if every number is not prime. Otherwise, return true.
+// [2,3,5,7]
+const isPrime = (numberArray) => {
+  return numberArray.every((number) => {
+    for (let i = 2; i < number; i++) {
+      if (number % i === 0) return false;
+    }
+    return number > 1;
+  });
+};
+console.log(isPrime([2, 3, 5, 7, 8])); // true
