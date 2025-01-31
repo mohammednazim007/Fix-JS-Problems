@@ -825,4 +825,13 @@ const isPrime = (numberArray) => {
     return number > 1;
   });
 };
-console.log(isPrime([2, 3, 5, 7, 8])); // true
+// console.log(isPrime([2, 3, 5, 7, 8]));
+
+// 085: Write a JavaScript program that takes an array with mixed data type and calculates the sum of all numbers.
+const sumOfNumbers = (array) => {
+  return array.reduce(
+    (acc, curr) => acc + (typeof curr === "number" ? curr : 0),
+    0
+  );
+};
+// console.log(sumOfNumbers([1, 2, "50", "77", "a", "b", 3, 4, "c"])); // 10
