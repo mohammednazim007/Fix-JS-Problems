@@ -846,12 +846,26 @@ const factorChain = (array) => {
 // console.log(factorChain([2, 4, 8, 16, 32,65]));
 
 // 087: Write a JavaScript program to get all the indexes where NaN is found in a given array of numbers and NaN.
-const findNaNIndex = (array=[]) => {
+const findNaNIndex = (array = []) => {
   return array.reduce((acc, curr, index) => {
-    if(isNaN(curr)) {
+    if (isNaN(curr)) {
       acc.push(index);
     }
-    return acc
-  },[])
-}
-console.log(findNaNIndex([1, 2, NaN, 3, NaN, 4, 5, NaN,"a","d",NaN]));
+    return acc;
+  }, []);
+};
+// console.log(findNaNIndex([1, 2, NaN, 3, NaN, 4, 5, NaN,"a","d",NaN]));
+
+// 088: Write a JavaScript program to count the number of arrays inside a given array. it should be count all level deep
+const countInsideArray = (array) => {
+  return array.reduce((acc, curr) => {
+    if (Array.isArray(curr)) {
+      acc += 1;
+      if (Array.isArray(curr)) {
+        acc += countInsideArray(curr);
+      }
+    }
+    return acc;
+  }, 0);
+};
+// console.log(countInsideArray([1, 2, [3, 4], 5, [6, 7, [6, ,[[6, 7],6, 7],7]]]));
