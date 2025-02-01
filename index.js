@@ -844,3 +844,14 @@ const factorChain = (array) => {
   });
 };
 // console.log(factorChain([2, 4, 8, 16, 32,65]));
+
+// 087: Write a JavaScript program to get all the indexes where NaN is found in a given array of numbers and NaN.
+const findNaNIndex = (array=[]) => {
+  return array.reduce((acc, curr, index) => {
+    if(isNaN(curr)) {
+      acc.push(index);
+    }
+    return acc
+  },[])
+}
+console.log(findNaNIndex([1, 2, NaN, 3, NaN, 4, 5, NaN,"a","d",NaN]));
