@@ -13,4 +13,10 @@ const deleteProperty = (obj, prop) => {
   delete obj[prop];
   return obj;
 };
-console.log(deleteProperty({ name: "David Rayy", sclass: "VI", rollno: 12 }, "rollno"));
+// console.log(deleteProperty({ name: "David Rayy", sclass: "VI", rollno: 12 }, "rollno"));
+
+// 003: Write a JavaScript program to get the length of a JavaScript object.
+// var student = { name: "David Rayy", sclass: "VI", rollno: 12 };
+// Output: 3
+const getLength=obj=>Object.keys(obj).length
+// console.log(getLength({ name: "David Rayy", sclass: "VI", rollno: 12 }));
