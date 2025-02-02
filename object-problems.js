@@ -21,7 +21,7 @@ const deleteProperty = (obj, prop) => {
 const getLength = (obj) => Object.keys(obj).length;
 // console.log(getLength({ name: "David Rayy", sclass: "VI", rollno: 12 }));
 
-// Write a bubble sort algorithm in JavaScript.
+// 004: Write a bubble sort algorithm in JavaScript.
 // Note : Bubble sort is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted,
 // Sample Data: [6,4,0, 3,-2,1]
 // Expected Output: [-2, 0, 1, 3, 4, 6]
