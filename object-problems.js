@@ -38,3 +38,13 @@ const bubbleSort = (arr) => {
   return arr;
 };
 // console.log(bubbleSort([6, 4, 0, 3, -2, 1]));
+
+// 005: Write a JavaScript program that returns a subset of a string.
+// Expected Output: ["d", "do", "dog", "o", "og", "g"]
+const generateSubstring = (str) => {
+  const result = [];
+
+  const strArray = str.
+  console.log(strArray);
+};
+generateSubstring("dog");
