@@ -44,7 +44,11 @@ const bubbleSort = (arr) => {
 const generateSubstring = (str) => {
   const result = [];
 
-  const strArray = str.
-  console.log(strArray);
+  for (let i = 0; i < str.length; i++) {
+    for (let w = i + 1; w <= str.length; w++) {
+      result.push(str.substring(i, w));
+    }
+  }
+  return result;
 };
-generateSubstring("dog");
+console.log(generateSubstring("dog"));
