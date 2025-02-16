@@ -56,6 +56,3 @@ const person4 = {
 // Object.assign - is used to copy properties from one object to another
 const person5 = Object.assign({}, person4);
 person5.name = "Rahul Kumar";
-console.log(person5);
-console.log(person4);
-
