@@ -28,3 +28,18 @@ const modify2 = Object.seal(person2);
 person2.profession = "developer"; // not allowed
 delete person2.name; // not allowed
 person2.age = 24; // allowed
+
+const person3 = {
+  name: "Rahul",
+  age: 23,
+  hobbies: ["cricket", "football", "chess"],
+  address: {
+    city: "Mumbai",
+    pincode: 400012,
+  },
+}
+// Object.freeze - is not allow to add new properties and also not allowed to delete existing properties and also not allowed to modify existing properties
+const modify3 = Object.freeze(person3);
+person3.profession = "developer"; // not allowed
+delete person3.name; // not allowed
+person3.age = 24; // not allowed
