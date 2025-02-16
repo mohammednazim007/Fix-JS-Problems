@@ -37,9 +37,25 @@ const person3 = {
     city: "Mumbai",
     pincode: 400012,
   },
-}
+};
 // Object.freeze - is not allow to add new properties and also not allowed to delete existing properties and also not allowed to modify existing properties
 const modify3 = Object.freeze(person3);
 person3.profession = "developer"; // not allowed
 delete person3.name; // not allowed
 person3.age = 24; // not allowed
+
+const person4 = {
+  name: "Rahul",
+  age: 23,
+  hobbies: ["cricket", "football", "chess"],
+  address: {
+    city: "Mumbai",
+    pincode: 400012,
+  },
+};
+// Object.assign - is used to copy properties from one object to another
+const person5 = Object.assign({}, person4);
+person5.name = "Rahul Kumar";
+console.log(person5);
+console.log(person4);
+
