@@ -12,7 +12,7 @@ const person = {
 const modify = Object.preventExtensions(person);
 person.profession = "developer"; // not allowed
 person.age = 24; // allowed
-console.log(person);
+
 
 const person2 = {
   name: "Rahul",
