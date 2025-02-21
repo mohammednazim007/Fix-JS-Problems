@@ -10,24 +10,31 @@ Include relevant info: Mention issue numbers and branch names.
 Consistent formatting: Stick to a standard format.
 
 Examples:
+
 1. Fixing a Bug:
-fix(auth): fix login issue #123
-Fix the login issue by updating the authentication logic.
+   fix(auth): fix login issue #123
+   Fix the login issue by updating the authentication logic.
 
 2. Adding a Feature:
-feat(ui): add new user profile page
-Add a new user profile page with user details and settings.
+   feat(ui): add new user profile page
+   Add a new user profile page with user details and settings.
 
 3. Documentation Update:
-docs(readme): update README with new installation instructions
-Update the README file to include new installation instructions.
+   docs(readme): update README with new installation instructions
+   Update the README file to include new installation instructions.
 
 4. Refactoring Code:
-refactor(auth): refactor authentication module
-Refactor the authentication module to improve code readability and maintainability.
+   refactor(auth): refactor authentication module
+   Refactor the authentication module to improve code readability and maintainability.
 
 5. Performance Optimization:
-perf(api): optimize API response time
-Optimize the API response time by implementing caching and reducing database queries.
+   perf(api): optimize API response time
+   Optimize the API response time by implementing caching and reducing database queries.
 
+6. Testing:
+   test(auth): add unit tests for authentication module
+   Add unit tests for the authentication module to ensure its functionality.
 
+7. Chores:
+   chore(deps): update dependencies to latest versions
+   Update all project dependencies to their latest versions to ensure compatibility and security.
