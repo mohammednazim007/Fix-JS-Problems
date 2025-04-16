@@ -1,11 +1,11 @@
-const randomString = (length) => {
-  let result = "";
-  const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  const charactersLength = characters.length;
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-};
-console.log(randomString(10)); // Example usage: generates a random string of length 10
+const express = require("express");
+const mongoose = require("mongoose");
+const app = express();
+const port = process.env.PORT || 3000;
+const db = mongoose.connect("mongodb://localhost/test");
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
