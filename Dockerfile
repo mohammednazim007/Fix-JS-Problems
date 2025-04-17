@@ -4,9 +4,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN yarn add
+RUN yarn
 
 EXPOSE 3001
 
 CMD ["node", "app.js"]
 
+# docker build -t node-application .

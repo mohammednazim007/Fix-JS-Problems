@@ -38,3 +38,12 @@ Examples:
 7. Chores:
    chore(deps): update dependencies to latest versions
    Update all project dependencies to their latest versions to ensure compatibility and security.
+
+
+💡 Tips for Writing Commit Messages:
+1. docker images // To display the docker images
+2. docker ps // To display the running docker containers
+3. docker ps -a // To display all the docker containers
+4. docker -t create-name . // To create a new docker image with a specific name
+5. docker run -p 8080:8080 image-name // To run a docker image in a container
+6.
