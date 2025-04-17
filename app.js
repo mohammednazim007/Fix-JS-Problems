@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 const db = mongoose.connect("mongodb://localhost/test");
 
 app.use(cors());
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/users", (req, res) => {
-  res.json({ message: "Hello World!" });
+  res.send("Get all users");
 });
 
 app.listen(port, () => {
