@@ -6,7 +6,7 @@ COPY . .
 
 RUN yarn
 
-EXPOSE 3001
+EXPOSE 3000
 
 CMD ["node", "app.js"]
 

@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/users", (req, res) => {
-  res.send("This is the API endpoint for users");
+  res.json({ message: "Hello World!" });
 });
 
 app.listen(port, () => {
