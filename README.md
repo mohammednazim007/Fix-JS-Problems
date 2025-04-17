@@ -57,4 +57,13 @@ Examples:
 
 8. docker container start 6412c863db20 // To start a stopped docker container
 
-9.
+9. docker rmi image-name // To remove a docker image
+
+10. docker rm container-id // To remove a docker container
+
+11. docker image ls // To list all the docker images
+
+12. docker container ls // To list all the docker containers
+
+13. docker container ls -a // To list all the docker containers including stopped ones
+
