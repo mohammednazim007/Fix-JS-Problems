@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 8000;
-const db = mongoose.connect("mongodb://localhost/test");
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
