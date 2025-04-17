@@ -53,4 +53,8 @@ Examples:
 
 6. docker run -it 4d722a10e4b3 // To run a docker image in an interactive terminal
 
-7. docker stop <container-id> // To stop a running docker container
+7. docker container stop 6412c863db20 // To stop a running docker container
+
+8. docker container start 6412c863db20 // To start a stopped docker container
+
+9.
