@@ -52,3 +52,5 @@ Examples:
 5. docker run -p 8080:8080 image-name // To run a docker image in a container
 
 6. docker run -it 4d722a10e4b3 // To run a docker image in an interactive terminal
+
+7. docker stop <container-id> // To stop a running docker container

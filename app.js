@@ -1,5 +1,4 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 8000;
@@ -8,11 +7,11 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send(<h1>Hello World!</h1>);
 });
 
 app.get("/api/users", (req, res) => {
-  res.send("Get all users");
+  res.send(<h1>Get all users from the database</h1>);
 });
 
 app.listen(port, () => {
