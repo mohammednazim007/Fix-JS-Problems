@@ -80,8 +80,8 @@ docker rm container-id
 13.To list all the docker images
 docker image ls
 
-14.To list all the docker containers
+14.To display the running docker containers
 docker container ls
 
-15.To list all the docker containers including stopped ones
+15.To display the running docker containers with hidden containers
 docker container ls -a
