@@ -7,7 +7,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("Hello World! This is the backend server.");
+  res.send(
+    "Hello World! This is the backend server. You can find the frontend at"
+  );
 });
 
 app.get("/api/users", (req, res) => {
