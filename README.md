@@ -49,21 +49,22 @@ Examples:
 
 4. docker build -t create-name . // To create a new docker image with a specific name
 
-5. docker run -p 8080:8080 image-name // To run a docker image in a container
+5. docker build -t create-name:v1 . //
 
-6. docker run -it 4d722a10e4b3 // To run a docker image in an interactive terminal
+6. docker run -p 8080:8080 image-name // To run a docker image in a container
 
-7. docker container stop 6412c863db20 // To stop a running docker container
+7. docker run -it 4d722a10e4b3 // To run a docker image in an interactive terminal
 
-8. docker container start 6412c863db20 // To start a stopped docker container
+8. docker container stop 6412c863db20 // To stop a running docker container
 
-9. docker rmi image-name // To remove a docker image
+9. docker container start 6412c863db20 // To start a stopped docker container
 
-10. docker rm container-id // To remove a docker container
+10. docker rmi image-name // To remove a docker image
 
-11. docker image ls // To list all the docker images
+11. docker rm container-id // To remove a docker container
 
-12. docker container ls // To list all the docker containers
+12. docker image ls // To list all the docker images
 
-13. docker container ls -a // To list all the docker containers including stopped ones
+13. docker container ls // To list all the docker containers
 
+14. docker container ls -a // To list all the docker containers including stopped ones
