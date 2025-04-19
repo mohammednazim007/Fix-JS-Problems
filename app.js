@@ -7,11 +7,11 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send(<h1>Hello World!</h1>);
+  res.send("Hello World! This is the backend server.");
 });
 
 app.get("/api/users", (req, res) => {
-  res.send(<h1>Get all users from the database</h1>);
+  res.send("Get all users from the database");
 });
 
 app.listen(port, () => {

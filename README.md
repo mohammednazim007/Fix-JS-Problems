@@ -41,47 +41,59 @@ Examples:
 
 # 💡 Tips for Writing Commit Messages:
 
-1.check the docker images that are currently running
+# check the docker images that are currently running
 docker images
 
-2.To display the running docker containers
+# To display the running docker containers
 docker ps
 
-3.To display all the docker containers
+# To display all the docker containers
 docker ps -a
 
-4.To create a new docker image with a specific name
+# To create a new docker image with a specific name
 docker build -t create-name . 
 
-5.To create a new docker image with a specific name and version
+# To create a new docker image with a specific name and version
 docker build -t create-name:v1 . 
 
-6.To run a docker image in a container
-docker run -p (random port 8080):(EXPOSE 8000) image-name
-
-7.To run a docker image in an interactive terminal with a specific container ID
+# To run a docker image in an interactive terminal with a specific container ID
 docker run -it 4d722a10e4b3 
 
-8.To stop a running docker container
+# To run a docker image in a container
+docker run -p (custom port 8080):(EXPOSE 8000) image-name
+
+# Run the docker image in a container with (--rm) to automatically remove the container when it exits.
+docker run -p 8005:8000 --rm app-node:v1
+
+# Run the docker image in a container with (--name) to give a custom name to the container.
+docker run -p 8555:8000 --name node-one --rm nodes:v1
+
+# To stop a running docker container
 docker container stop 6412c863db20
 
-9.To start a stopped docker container
+# To start a stopped docker container
 docker container start 6412c863db20
 
-10.To remove a docker image
+# To remove a docker image
 docker rmi image-name
 
-11.To remove a specific docker image
+# To remove a specific docker image
 docker rmi node-app:v1
 
-12.To remove a docker container
+# To remove a docker container
 docker rm container-id 
 
-13.To list all the docker images
+# To list all the docker images
 docker image ls
 
-14.To display the running docker containers
+# To display the running docker containers
 docker container ls
 
-15.To display the running docker containers with hidden containers
+# To display the running docker containers with hidden containers
 docker container ls -a
+
+# This command removes all stopped containers — it won’t touch running ones.
+docker container prune -f
+
+# This command removes all unused images — it won’t touch running ones.
+docker image prune -a
