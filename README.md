@@ -41,30 +41,32 @@ Examples:
 
 # 💡 Tips for Writing Commit Messages:
 
-1. docker images // check the docker images that are currently running
+1. docker images //check the docker images that are currently running
 
-2. docker ps // To display the running docker containers
+2. docker ps //To display the running docker containers
 
-3. docker ps -a // To display all the docker containers
+3. docker ps -a //To display all the docker containers
 
-4. docker build -t create-name . // To create a new docker image with a specific name
+4. docker build -t create-name . //To create a new docker image with a specific name
 
-5. docker build -t create-name:v1 . //
+5. docker build -t create-name:v1 . //To create a new docker image with a specific name and version
 
-6. docker run -p 8080:8080 image-name // To run a docker image in a container
+6. docker run -p 8080:8080 image-name //To run a docker image in a container
 
-7. docker run -it 4d722a10e4b3 // To run a docker image in an interactive terminal
+7. docker run -it 4d722a10e4b3 //To run a docker image in an interactive terminal
 
-8. docker container stop 6412c863db20 // To stop a running docker container
+8. docker container stop 6412c863db20 //To stop a running docker container
 
-9. docker container start 6412c863db20 // To start a stopped docker container
+9. docker container start 6412c863db20 //To start a stopped docker container
 
-10. docker rmi image-name // To remove a docker image
+10. docker rmi image-name //To remove a docker image
 
-11. docker rm container-id // To remove a docker container
+11. docker rmi node-app:v1 //To remove a specific docker image
 
-12. docker image ls // To list all the docker images
+12. docker rm container-id //To remove a docker container
 
-13. docker container ls // To list all the docker containers
+13. docker image ls //To list all the docker images
 
-14. docker container ls -a // To list all the docker containers including stopped ones
+14. docker container ls // To list all the docker containers
+
+15. docker container ls -a //To list all the docker containers including stopped ones
