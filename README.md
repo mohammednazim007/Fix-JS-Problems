@@ -41,32 +41,47 @@ Examples:
 
 # 💡 Tips for Writing Commit Messages:
 
-1. docker images //check the docker images that are currently running
+1.check the docker images that are currently running
+docker images
 
-2. docker ps //To display the running docker containers
+2.To display the running docker containers
+docker ps
 
-3. docker ps -a //To display all the docker containers
+3.To display all the docker containers
+docker ps -a
 
-4. docker build -t create-name . //To create a new docker image with a specific name
+4.To create a new docker image with a specific name
+docker build -t create-name . 
 
-5. docker build -t create-name:v1 . //To create a new docker image with a specific name and version
+5.To create a new docker image with a specific name and version
+docker build -t create-name:v1 . 
 
-6. docker run -p 8080:8080 image-name //To run a docker image in a container
+6.To run a docker image in a container
+docker run -p (random port 8080):(EXPOSE 8000) image-name
 
-7. docker run -it 4d722a10e4b3 //To run a docker image in an interactive terminal
+7.To run a docker image in an interactive terminal with a specific container ID
+docker run -it 4d722a10e4b3 
 
-8. docker container stop 6412c863db20 //To stop a running docker container
+8.To stop a running docker container
+docker container stop 6412c863db20
 
-9. docker container start 6412c863db20 //To start a stopped docker container
+9.To start a stopped docker container
+docker container start 6412c863db20
 
-10. docker rmi image-name //To remove a docker image
+10.To remove a docker image
+docker rmi image-name
 
-11. docker rmi node-app:v1 //To remove a specific docker image
+11.To remove a specific docker image
+docker rmi node-app:v1
 
-12. docker rm container-id //To remove a docker container
+12.To remove a docker container
+docker rm container-id 
 
-13. docker image ls //To list all the docker images
+13.To list all the docker images
+docker image ls
 
-14. docker container ls // To list all the docker containers
+14.To list all the docker containers
+docker container ls
 
-15. docker container ls -a //To list all the docker containers including stopped ones
+15.To list all the docker containers including stopped ones
+docker container ls -a
