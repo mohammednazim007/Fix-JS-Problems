@@ -1,21 +1,23 @@
-# FROM node:22 or FROM node can use specific version
-# POSITION: Dockerfile instructions is matter of order
-
+# Use a specific Node version for consistency (e.g., 22-alpine for a lighter image)
 FROM node
 
+# Set the working directory
 WORKDIR /app
 
-RUN yarn add nodemon
+# Copy only package.json and yarn.lock first (to leverage Docker layer caching)
+COPY package.json yarn.lock ./
 
-COPY package.json .
-
-
+# Install dependencies
 RUN yarn install
 
+# Install nodemon as a development dependency globally
+RUN yarn global add nodemon
+
+# Copy the rest of your app code
 COPY . .
 
+# Expose the app port
 EXPOSE 8000
 
-CMD ["yarn","run" "dev"]
-
-# docker build -t node-application .
+# Run the app using the dev script
+CMD ["yarn", "run", "dev"]

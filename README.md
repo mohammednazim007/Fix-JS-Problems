@@ -65,13 +65,13 @@ docker run -p (custom port 8080):(EXPOSE 8000) image-name
 # Run the docker image in a container with (--rm) to automatically remove the container when it exits.
 docker run -p 8005:8000 --rm app-node:v1
 
-# Run the docker image in a container with (--name) to give a custom name to the container. (BEST PRACTICE)
+# Run the docker image in a container with (--name) to give a custom name to the container.(BEST PRACTICE)
 docker run -p 8555:8000 --name node-one --rm nodes:v1
 
-# To stop a running docker container
+# Stop a running docker container
 docker container stop 6412c863db20
 
-# To start a stopped docker container
+# Start a stopped docker container
 docker container start 6412c863db20
 
 # To remove a docker image
