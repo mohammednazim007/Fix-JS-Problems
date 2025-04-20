@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the app using the dev script
-CMD ["yarn", "run", "dev"]
+CMD ["yarn", "dev"]

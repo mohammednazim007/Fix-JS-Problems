@@ -86,10 +86,10 @@ docker rm container-id
 # To list all the docker images
 docker image ls
 
-# To display the running docker containers
+# Display the running docker containers
 docker container ls
 
-# To display the running docker containers with hidden containers
+# Display the running docker containers with hidden containers
 docker container ls -a
 
 # This command removes all stopped containers — it won’t touch running ones.
@@ -97,3 +97,6 @@ docker container prune -f
 
 # This command removes all unused images — it won’t touch running ones.
 docker image prune -a
+
+# Run a docker image in a detached terminal with a specific image 
+docker run -p 8004:8000 --name container --rm -v "/c/Users/nazim/Desktop/Fix-JS-Problems:/app" image-name:v1
