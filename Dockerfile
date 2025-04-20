@@ -8,16 +8,14 @@ WORKDIR /app
 RUN yarn add nodemon
 
 COPY package.json .
-COPY yarn.lock .
+
 
 RUN yarn install
 
 COPY . .
 
-
-
 EXPOSE 8000
 
-CMD ["yarn", "dev"]
+CMD ["yarn","run" "dev"]
 
 # docker build -t node-application .
