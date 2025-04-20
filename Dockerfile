@@ -5,6 +5,8 @@ FROM node
 
 WORKDIR /app
 
+RUN yarn add nodemon
+
 COPY package.json .
 COPY yarn.lock .
 
@@ -16,6 +18,6 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["node", "app.js"]
+CMD ["yarn", "dev"]
 
 # docker build -t node-application .
