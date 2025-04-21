@@ -39,64 +39,64 @@ Examples:
    chore(deps): update dependencies to latest versions
    Update all project dependencies to their latest versions to ensure compatibility and security.
 
-# 💡 Tips for Writing Commit Messages:
+#💡 Tips for Writing Commit Messages:
 
-# check the docker images that are currently running
+1. Check the docker images that are currently running
 docker images
 
-# To display the running docker containers
+2. Display the running docker containers
 docker ps
 
-# To display all the docker containers
+3. Display all the docker containers
 docker ps -a
 
-# To create a new docker image with a specific name
+4. Create a new docker image with a specific name
 docker build -t create-name . 
 
-# To create a new docker image with a specific name and version
+5. Create a new docker image with a specific name and version
 docker build -t create-name:v1 . 
 
-# To run a docker image in an interactive terminal with a specific container ID
+6. Run a docker image in an interactive terminal with a specific container ID
 docker run -it 4d722a10e4b3 
 
-# To run a docker image in a container
+7. Run a docker image in a container
 docker run -p (custom port 8080):(EXPOSE 8000) image-name
 
-# Run the docker image in a container with (--rm) to automatically remove the container when it exits.
+8. Run the docker image in a container with (--rm) to automatically remove the container when it exits.
 docker run -p 8005:8000 --rm app-node:v1
 
-# Run the docker image in a container with (--name) to give a custom name to the container.(BEST PRACTICE)
+9. Run the docker image in a container with (--name) to give a custom name to the container.(BEST PRACTICE)
 docker run -p 8555:8000 --name node-one --rm nodes:v1
 
-# Stop a running docker container
+10. Stop a running docker container
 docker container stop 6412c863db20
 
-# Start a stopped docker container
+11. Start a stopped docker container
 docker container start 6412c863db20
 
-# To remove a docker image
+12. Remove a docker image
 docker rmi image-name
 
-# To remove a specific docker image
+13. Remove a specific docker image
 docker rmi node-app:v1
 
-# To remove a docker container
+14. Remove a docker container
 docker rm container-id 
 
-# To list all the docker images
+15. Display list of all the docker images
 docker image ls
 
-# Display the running docker containers
+16. Display the running docker containers
 docker container ls
 
-# Display the running docker containers with hidden containers
+17. Display the running docker containers with hidden containers
 docker container ls -a
 
-# This command removes all stopped containers — it won’t touch running ones.
+18. This command removes all stopped containers — it won’t touch running ones.
 docker container prune -f
 
-# This command removes all unused images — it won’t touch running ones.
+19. This command removes all unused images — it won’t touch running ones.
 docker image prune -a
 
-# Run a docker image in a detached terminal with a specific image 
+20. Run a docker image in a detached terminal with a specific image 
 docker run -p 8004:8000 --name container --rm -v "/c/Users/nazim/Desktop/Fix-JS-Problems:/app" image-name:v1
