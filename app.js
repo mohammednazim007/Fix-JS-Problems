@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("Hello World! This is the backend server. sxxx Mohammed");
+  res.send("Hello World! This is the backend server. Mohammed");
 });
 
 app.get("/api/users", (req, res) => {

@@ -1,5 +1,5 @@
 # Use a specific Node version for consistency (e.g., 22-alpine for a lighter image)
-FROM node
+FROM node:22
 
 # Set the working directory
 WORKDIR /app
