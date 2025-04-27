@@ -121,3 +121,33 @@ docker image prune -a
 
 docker run -p 8004:8000 --name container --rm -v "/c/Users/nazim/Desktop/Fix-JS-Problems:/app" image-name:v1
 
+<!-- github command -->
+
+1. Add a new file to the repository
+git add .
+
+2. Commit the changes with a descriptive commit message
+git commit -m "fix: fix login issue ###123"
+
+3. Push the changes to the remote repository
+git push origin main
+
+4. Create a new branch
+git checkout -b new-branch
+
+5. Switch to an existing branch
+git checkout branch-name
+
+6. Merge changes from a branch into the current branch
+git merge branch-name
+
+7. Delete a branch
+git branch -d branch-name
+
+8. List all branches
+git branch -a
+
+9. Delete a remote branch
+git push origin --delete branch-name
+
+10.
