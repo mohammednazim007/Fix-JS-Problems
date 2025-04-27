@@ -120,3 +120,4 @@ docker image prune -a
 ### Run a docker image in a detached terminal with a specific image
 
 docker run -p 8004:8000 --name container --rm -v "/c/Users/nazim/Desktop/Fix-JS-Problems:/app" image-name:v1
+
