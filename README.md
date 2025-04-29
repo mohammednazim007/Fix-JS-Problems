@@ -159,11 +159,11 @@ docker run -p 8004:8000 --name container --rm -v "/c/Users/nazim/Desktop/Fix-JS-
 12. Pull changes from a remote repository
     git pull origin branch-name
 
-13. Check the differences between the current branch and the committed changes
-    git reflog
+13. Delete a remote branch permanently (never access able )
+    git push origin -d branch-name
 
 14. Check the differences between the current branch and the committed changes
+    git reflog
+
+15. Check the differences between the current branch and the committed changes
     git log --oneline
-
-15.
-
