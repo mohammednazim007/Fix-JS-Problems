@@ -176,3 +176,6 @@ docker run -p 8004:8000 --name container --rm -v "/c/Users/nazim/Desktop/Fix-JS-
 
 18. Show the stashed changes in the stash list
     git stash show -p
+
+19. Get back to the latest version of the stashed changes
+    git stash pop
