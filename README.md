@@ -44,3 +44,15 @@
 
 15. Check the differences between the current branch and the committed changes
     git log --oneline
+
+16. We can move one branch to another branch without pushing the changes to the remote repository. (temporary stash save)
+    git stash
+
+17. Check the stash list to see the stashed changes
+    git stash list
+
+18. Show the stashed changes in the stash list
+    git stash show -p
+
+19. Get back to the last version of temporary stashed changes
+    git stash pop
