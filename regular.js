@@ -7,7 +7,7 @@ const arrowFn = function (name, age) {
     },
     motherName: {
       name: "Mr. XXX",
-      printName:()=> {
+      printName: function () {
         console.log(`Mother's name is ${this.name}`);
       },
     },
