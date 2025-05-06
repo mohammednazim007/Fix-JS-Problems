@@ -1,11 +1,12 @@
-const arrowFn = (name, age) => {
+const arrowFn = function (name, age) {
   return {
-    name: this.name,
-    age: this.age,
-    fatherName: () => {
+    name: name,
+    age: age,
+    fatherName: function () {
       console.log(`Father's name is ${this.name}`);
     },
   };
 };
 
 const person = arrowFn("John", 30);
+person.fatherName(); // Father's name is undefined
